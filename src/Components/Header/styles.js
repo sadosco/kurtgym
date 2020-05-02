@@ -11,7 +11,7 @@ export const Container = styled.header`
   align-items: center;
 
   .logo {
-    width: 33.33%;
+    width: calc(100% / 3);
     text-align: center;
 
     img {
@@ -21,7 +21,7 @@ export const Container = styled.header`
 `;
 
 export const UserInfo = styled.div`
-  width: 33.33%;
+  width: calc(100% / 3);
   display: flex;
   align-items: center;
 
@@ -46,7 +46,7 @@ export const UserInfo = styled.div`
 `;
 
 export const Logout = styled.div`
-  width: 33.33%;
+  width: calc(100% / 3);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -59,5 +59,13 @@ export const Logout = styled.div`
   span {
     padding-right: 30px;
     font-size: 20px;
+  }
+
+  @media (max-width: 1200px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 1100px) {
+    justify-content: flex-start;
   }
 `;
