@@ -14,11 +14,12 @@ export default function Login() {
       <img src={logo} alt="KurtGym" />
 
       <Form onSubmit={handleSubmit}>
+        <Input name="name" placeholder="Nome completo" />
         <Input name="email" type="email" placeholder="Seu e-mail" />
         <Input name="password" type="password" placeholder="Sua senha" />
 
-        <button type="submit">Acessar conta</button>
-        <Link to="/signup">Criar conta</Link>
+        <button type="submit">Criar conta</button>
+        <Link to="/">Já tenho conta</Link>
       </Form>
     </>
   );

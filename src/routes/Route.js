@@ -2,30 +2,33 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import DefaultLayout from '../pages/_layouts/Default';
+import AuthLayout from '../pages/_layouts/auth';
+import DefaultLayout from '../pages/_layouts/default';
 
 export default function RoutesWrapper({
   component: Component,
   isPrivate,
   ...rest
 }) {
-  const login = false;
+  const logged = false;
 
-  if (!login && isPrivate) {
+  if (!logged && isPrivate) {
     return <Redirect to="/" />;
   }
 
-  if (login && !isPrivate) {
+  if (logged && !isPrivate) {
     return <Redirect to="/home" />;
   }
+
+  const Layout = logged ? DefaultLayout : AuthLayout;
 
   return (
     <Route
       rest={rest}
       render={(props) => (
-        <DefaultLayout>
+        <Layout>
           <Component props={props} />
-        </DefaultLayout>
+        </Layout>
       )}
     />
   );
