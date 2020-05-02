@@ -36,15 +36,16 @@ export const Content = styled.div`
   button {
     margin: 5px 0 0;
     height: 44px;
-    background: #a52a2a;
+    background: rgba(0, 0, 0, 0.4);
     font-weight: bold;
     color: #fff;
     border: 0;
     border-radius: 4px;
     font-size: 16px;
+    transition: background 0.2s;
 
     &:hover {
-      background: ${darken(0.03, '#a52a2a')};
+      background: ${darken(0.02, '#90251d')};
     }
   }
 
