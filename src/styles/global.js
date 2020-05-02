@@ -10,6 +10,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  &:focus {
+    outline: 0;
+  }
+
   html, body, #root {
     background: linear-gradient(-10deg, #d6663c, #fa9584);
     height: 100%;
@@ -30,5 +34,9 @@ export default createGlobalStyle`
 
   ul {
     list-style: none;
+  }
+
+  button {
+    cursor: pointer;
   }
 `;
