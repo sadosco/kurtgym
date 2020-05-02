@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import DefaultLayout from '../pages/_layouts/Default';
 
-export default function RouteWrapper({
+export default function RoutesWrapper({
   component: Component,
   isPrivate,
   ...rest
@@ -21,22 +21,22 @@ export default function RouteWrapper({
 
   return (
     <Route
-      {...rest}
+      rest={rest}
       render={(props) => (
         <DefaultLayout>
-          <Component {...props} />
+          <Component props={props} />
         </DefaultLayout>
       )}
     />
   );
 }
 
-RouteWrapper.propTypes = {
+RoutesWrapper.propTypes = {
   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
     .isRequired,
   isPrivate: PropTypes.bool,
 };
 
-RouteWrapper.defaultProps = {
+RoutesWrapper.defaultProps = {
   isPrivate: false,
 };
