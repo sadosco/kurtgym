@@ -4,8 +4,8 @@ export const Container = styled.header`
   width: 100%;
   height: 80px;
   min-width: 1300px;
-  background: #d6663c;
-  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  background: #90251d;
+  box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.7);
 
   display: flex;
   align-items: center;
