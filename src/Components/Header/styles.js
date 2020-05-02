@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  width: 100%;
   height: 80px;
   min-width: 1300px;
   background: #90251d;

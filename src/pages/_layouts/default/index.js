@@ -7,8 +7,10 @@ import { Wrapper } from './styles';
 export default function DefaultLayout({ children }) {
   return (
     <>
-      <Header />
-      <Wrapper>{children}</Wrapper>
+      <Wrapper>
+        <Header />
+        {children}
+      </Wrapper>
     </>
   );
 }
