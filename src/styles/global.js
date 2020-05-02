@@ -11,10 +11,12 @@ export default createGlobalStyle`
   }
 
   html, body, #root {
+    background: linear-gradient(-10deg, #d6663c, #fa9584);
     height: 100%;
   }
 
   body {
+    color: #fff;
     -webkit-font-smoothing: antialiased !important;
   }
 
