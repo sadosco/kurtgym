@@ -1,0 +1,128 @@
+{
+  "admin": [
+    {
+      "name": "Leonidas I de Esparta",
+      "e-mail": "leonidas@kurtgym.com",
+      "teacher": [
+        {
+          "id": 1,
+          "name": "David",
+          "cpf": "128283829412",
+          "e-mail": "david@kurtgym.com",
+          "clients": [
+            {
+              "id": 1,
+              "name": "Juliany",
+              "cpf": "89732678718",
+              "e-mail": "juliany_kurt@gmail.com",
+              "training": [
+                {
+                  "id": 1,
+                  "type": "A",
+                  "exercises": [
+                    "Burpee",
+                    "Agachamento",
+                    "Abdominal"
+                  ]
+                },
+                {
+                  "id": 2,
+                  "type": "B",
+                  "exercises": [
+                    "Flexão",
+                    "Prancha",
+                    "Barra"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "teacher": [
+    {
+      "id": 1,
+      "name": "David",
+      "cpf": "128283829412",
+      "e-mail": "david@kurtgym.com",
+      "clients": [
+        {
+          "id": 1,
+          "name": "Juliany",
+          "cpf": "89732678718",
+          "e-mail": "juliany_kurt@gmail.com",
+          "training": [
+            {
+              "id": 1,
+              "type": "A",
+              "exercises": [
+                "Burpee",
+                "Agachamento",
+                "Abdominal"
+              ]
+            },
+            {
+              "id": 2,
+              "type": "B",
+              "exercises": [
+                "Flexão",
+                "Prancha",
+                "Barra"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "client": [
+    {
+      "id": 1,
+      "name": "Juliany",
+      "cpf": "89732678718",
+      "e-mail": "juliany_kurt@gmail.com",
+      "training": [
+        {
+          "id": 1,
+          "type": "A",
+          "exercises": [
+            "Burpee",
+            "Agachamento",
+            "Abdominal"
+          ]
+        },
+        {
+          "id": 2,
+          "type": "B",
+          "exercises": [
+            "Flexão",
+            "Prancha",
+            "Barra"
+          ]
+        }
+      ]
+    }
+  ],
+  "training": [
+    {
+      "id": 1,
+      "type": "A",
+      "exercises": [
+        "Burpee",
+        "Agachamento",
+        "Abdominal"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "B",
+      "exercises": [
+        "Flexão",
+        "Prancha",
+        "Barra"
+      ]
+    }
+  ]
+}
