@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaSignOutAlt } from 'react-icons/fa';
-import userImg from '../../assets/images/leonidas.png';
 import logoImg from '../../assets/images/kurt-logo.png';
+
+import api from '../../services/api';
 
 import { Container, UserInfo, Logout } from './styles';
 
 export default function Header() {
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    async function getUserDetails() {
+      const email = 'leonidas@kurtgym.com';
+
+      const response = await api.get(`user?email=${email}`);
+
+      console.tron.log(response.data[0]);
+      setUser(response.data[0]);
+    }
+
+    getUserDetails();
+  }, []);
+
   return (
     <Container>
       <UserInfo>
-        <img src={userImg} alt="userImg" />
-        <strong>Leônidas I de Esparta</strong>
-        <span>Administrator</span>
+        <img src={user.avatar} alt="userImg" />
+        <strong>{user.name}</strong>
+        <span>{user.type}</span>
       </UserInfo>
       <div className="logo">
         <img src={logoImg} alt="logoImg" />
