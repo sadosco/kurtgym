@@ -124,5 +124,13 @@
         "Barra"
       ]
     }
+  ],
+  "user": [
+    {
+      "name": "Leonidas I de Esparta",
+      "avatar": "https://raw.githubusercontent.com/sadosco/kurtgym/7405a8a18294c113780610130f451a60322e1baf/src/assets/images/leonidas.png",
+      "email": "leonidas@kurtgym.com",
+      "type": "Administrator"
+    }
   ]
 }
