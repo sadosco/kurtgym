@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
+import { useDispatch } from 'react-redux';
 
+import * as Auth from '../../store/modules/auth/actions';
 import logo from '../../assets/images/kurtgym-logo2.png';
 
 export default function Login() {
-  function handleSubmit(data) {
-    console.tron.log(data);
+  const dispatch = useDispatch();
+
+  function handleSubmit({ email, password }) {
+    dispatch(Auth.signInRequest(email, password));
   }
 
   return (
