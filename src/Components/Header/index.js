@@ -15,7 +15,6 @@ export default function Header() {
 
       const response = await api.get(`user?email=${email}`);
 
-      console.tron.log(response.data[0]);
       setUser(response.data[0]);
     }
 
