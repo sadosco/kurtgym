@@ -22,6 +22,8 @@ export default function Header() {
     getUserDetails();
   }, []);
 
+  function handleLogout() {}
+
   return (
     <Container>
       <UserInfo>
@@ -32,9 +34,11 @@ export default function Header() {
       <div className="logo">
         <img src={logoImg} alt="logoImg" />
       </div>
-      <Logout>
-        <FaSignOutAlt />
-        <span>Logout</span>
+      <Logout onClick={handleLogout}>
+        <div>
+          <FaSignOutAlt />
+          <span>Logout</span>
+        </div>
       </Logout>
     </Container>
   );

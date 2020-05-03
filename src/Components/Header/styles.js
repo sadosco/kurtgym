@@ -47,17 +47,27 @@ export const UserInfo = styled.div`
 export const Logout = styled.div`
   width: calc(100% / 3);
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+  transition: 0.2s;
 
-  svg {
-    font-size: 30px;
-    margin-right: 10px;
-  }
+  div {
+    display: flex;
+    align-items: center;
 
-  span {
-    padding-right: 30px;
-    font-size: 20px;
+    &:hover {
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    svg {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+
+    span {
+      padding-right: 30px;
+      font-size: 20px;
+    }
   }
 
   @media (max-width: 1200px) {
