@@ -26,12 +26,12 @@ export default function Header() {
   return (
     <Container>
       <UserInfo>
-        <img src={user.avatar} alt="userImg" />
+        <img src={user.avatar} alt={user.name} />
         <strong>{user.name}</strong>
         <span>{user.type}</span>
       </UserInfo>
       <div className="logo">
-        <img src={logoImg} alt="logoImg" />
+        <img src={logoImg} alt="KurtGym" />
       </div>
       <Logout onClick={handleLogout}>
         <div>
