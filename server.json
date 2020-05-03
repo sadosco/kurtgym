@@ -132,5 +132,12 @@
       "email": "leonidas@kurtgym.com",
       "type": "Administrator"
     }
+  ],
+  "session": [
+    {
+      "email": "leonidas@kurtgym.com",
+      "password": "esparta1",
+      "token": "123"
+    }
   ]
 }
