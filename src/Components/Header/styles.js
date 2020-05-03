@@ -48,11 +48,11 @@ export const Logout = styled.div`
   width: calc(100% / 3);
   display: flex;
   justify-content: flex-end;
-  transition: 0.2s;
 
   div {
     display: flex;
     align-items: center;
+    transition: 0.4s;
 
     &:hover {
       cursor: pointer;
