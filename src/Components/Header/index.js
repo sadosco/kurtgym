@@ -1,34 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { FaSignOutAlt } from 'react-icons/fa';
-import logoImg from '../../assets/images/kurt-logo.png';
 
-import api from '../../services/api';
+import logoImg from '../../assets/images/kurt-logo.png';
 
 import { Container, UserInfo, Logout } from './styles';
 
 export default function Header() {
-  const [user, setUser] = useState({});
-
-  useEffect(() => {
-    async function getUserDetails() {
-      const email = 'leonidas@kurtgym.com';
-
-      const response = await api.get(`user?email=${email}`);
-
-      setUser(response.data[0]);
-    }
-
-    getUserDetails();
-  }, []);
+  const profile = useSelector((state) => state.user.profile);
 
   function handleLogout() {}
 
   return (
     <Container>
       <UserInfo>
-        <img src={user.avatar} alt={user.name} />
-        <strong>{user.name}</strong>
-        <span>{user.type}</span>
+        <img src={profile.avatar} alt={profile.name} />
+        <strong>{profile.name}</strong>
+        <span>{profile.type}</span>
       </UserInfo>
       <div className="logo">
         <img src={logoImg} alt="KurtGym" />
