@@ -137,7 +137,14 @@
     {
       "email": "leonidas@kurtgym.com",
       "password": "esparta1",
-      "token": "123"
+      "token": "123",
+      "user":
+        {
+          "name": "Leonidas I de Esparta bla bla",
+          "avatar": "https://raw.githubusercontent.com/sadosco/kurtgym/7405a8a18294c113780610130f451a60322e1baf/src/assets/images/leonidas.png",
+          "email": "leonidas@kurtgym.com",
+          "type": "Administrator"
+        }
     }
   ]
 }
