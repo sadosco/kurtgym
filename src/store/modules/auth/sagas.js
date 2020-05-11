@@ -1,18 +1,26 @@
-import { all, call, takeLatest } from 'redux-saga/effects';
-
+import { all, call, put, takeLatest } from 'redux-saga/effects';
+import history from '../../../services/history';
 import api from '../../../services/api';
 
+import { signInSuccess, signFailure } from './actions';
+
 function* signInRequest({ email, password }) {
-  const response = yield call(api.get, 'session');
+  try {
+    const response = yield call(api.get, 'session');
 
-  const user = response.data.find(
-    ({ email: userEmail, password: userPassword }) =>
-      userEmail === email && userPassword === password
-  );
+    const session = response.data.find(
+      ({ email: userEmail, password: userPassword }) =>
+        userEmail === email && userPassword === password
+    );
 
-  if (!user) return;
+    if (!session) return;
 
-  console.tron.log(user.token);
+    yield put(signInSuccess(session.token, session.user));
+
+    history.push('/home');
+  } catch (error) {
+    yield put(signFailure());
+  }
 }
 
 export default all([takeLatest('@auth/SIGN_IN_REQUEST', signInRequest)]);
